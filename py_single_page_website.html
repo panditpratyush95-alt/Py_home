@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050807">
+<meta name="description" content="Meet py, your personal AI workspace for coding, thinking, automation and getting things done.">
+<title>py — Your AI, your workspace</title>
+<style>
+
+:root{color-scheme:dark;--bg:#050807;--panel:#0c1411;--panel2:#101b16;--line:#20372c;--text:#f2f8f4;--muted:#a2b5aa;--teal:#43e6a2;--teal2:#18b982;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#123b2a 0,transparent 48%),var(--bg);color:var(--text);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1b2b22}.brand{display:flex;align-items:center;gap:12px;font-size:23px;font-weight:800;letter-spacing:-.06em}.mark{width:38px;height:38px;display:grid;place-items:center;border:1px solid #2b6249;border-radius:12px;background:#0c2117;color:var(--teal);font-size:23px}.navlinks{display:flex;gap:25px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--teal)}.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid #24543d;background:#0c1c14;color:#a7f5ce;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 13px var(--teal)}.hero{text-align:center;padding:100px 0 76px}.hero h1{font-size:clamp(48px,8vw,88px);letter-spacing:-.075em;line-height:1.03;margin:24px auto 22px;max-width:900px}.accent{color:var(--teal)}.lead{max-width:650px;margin:0 auto;color:var(--muted);font-size:18px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:12px;padding:14px 20px;font-weight:750;border:1px solid #2b4436;transition:transform .15s,background .15s;cursor:pointer;font:inherit;font-weight:750}.btn:hover{transform:translateY(-2px)}.primary{background:var(--teal);color:#052014;border-color:var(--teal)}.primary:hover{background:#72f0b8}.secondary{background:#0c1410;color:var(--text)}.fine{color:#7f9588;font-size:12px;margin-top:14px}.preview{max-width:850px;margin:50px auto 0;border:1px solid #254332;border-radius:20px;background:linear-gradient(140deg,#0d1711,#070b08);padding:18px;text-align:left;box-shadow:0 35px 100px #0008}.windowbar{display:flex;gap:6px;border-bottom:1px solid #203127;padding:4px 4px 14px}.windowbar i{width:8px;height:8px;border-radius:50%;background:#365242}.mock{padding:28px 20px}.mocklabel{font-size:12px;color:var(--teal);letter-spacing:.1em;text-transform:uppercase}.mock h3{font-size:27px;letter-spacing:-.04em;margin:8px 0}.mock p{color:var(--muted);margin:0}.prompt{margin-top:26px;border:1px solid #294235;border-radius:12px;padding:14px;color:#7f9688;display:flex;justify-content:space-between;gap:12px}.prompt b{color:#062116;background:var(--teal);padding:4px 10px;border-radius:8px}.section{padding:65px 0}.section h2{text-align:center;font-size:clamp(30px,4vw,44px);letter-spacing:-.05em;margin:0 0 12px}.sub{text-align:center;color:var(--muted);max-width:600px;margin:0 auto 32px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{padding:24px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(150deg,#0d1711,#090d0b)}.icon{width:40px;height:40px;display:grid;place-items:center;color:var(--teal);background:#10271b;border:1px solid #234a34;border-radius:12px;font-size:19px}.card h3{margin:17px 0 6px}.card p{margin:0;color:var(--muted);font-size:14px}.bottom{margin:45px 0 60px;padding:36px;border:1px solid #28503a;border-radius:20px;background:linear-gradient(120deg,#0d2116,#0b100d);display:flex;align-items:center;justify-content:space-between;gap:25px}.bottom h2{margin:0 0 6px;letter-spacing:-.05em}.bottom p{margin:0;color:var(--muted)}footer{border-top:1px solid #1b2b22;padding:25px 0;color:#7f9588;font-size:13px}.footrow{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.steps{max-width:760px;margin:35px auto;display:grid;gap:14px}.step{display:flex;gap:18px;padding:22px;border:1px solid var(--line);background:#0b120e;border-radius:15px}.num{flex:none;width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#102a1b;color:var(--teal);font-weight:800}.step h3{margin:0 0 5px}.step p{margin:0;color:var(--muted);font-size:14px}.notice{max-width:760px;margin:24px auto;padding:18px 20px;border:1px solid #5b4c26;background:#211b0c;border-radius:13px;color:#f1d99a;font-size:14px}.center{text-align:center}.hide{display:none}@media(max-width:760px){.navlinks{display:none}.hero{padding:70px 0 48px}.grid{grid-template-columns:1fr}.bottom{display:block}.bottom .btn{margin-top:20px}.mock{padding:22px 8px}.wrap{width:min(100% - 28px,1120px)}}
+
+
+.faq-list{max-width:820px;margin:32px auto 0;display:grid;gap:10px}
+.faq-item{border:1px solid var(--line);border-radius:14px;background:linear-gradient(150deg,#0d1711,#090d0b);overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:20px 22px;font-weight:750;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:24px;color:var(--teal);line-height:1}
+.faq-item[open] summary::after{content:"−"}
+.faq-item p{margin:0;padding:0 22px 20px;color:var(--muted);font-size:15px}
+.faq-item:focus-within{outline:2px solid var(--teal);outline-offset:2px}
+.faq-contact{text-align:center;color:var(--muted);margin:26px auto 0}
+#steps .steps{margin-top:35px}
+#steps h2{text-align:center}
+#steps .notice{margin-top:24px}
+.setup-download{padding:10px 0 20px}
+.navlinks{gap:20px}
+@media(max-width:760px){.faq-item summary{padding:17px}.faq-item p{padding:0 17px 17px}}
+
+</style>
+</head>
+<body id="top">
+<header class="wrap nav">
+<a class="brand" href="#top"><span class="mark">p.
+</span>
+<span>py</span>
+</a>
+<nav class="navlinks">
+<a href="#features">Features</a>
+<a href="#privacy">Privacy</a>
+<a href="#steps">Setup</a><a href="#faq">FAQ</a>
+</nav><a class="btn secondary" href="#download">Get py <span>↗
+</span></a></header>
+<main id="homepage-content">
+<section class="wrap hero">
+<span class="pill">
+<span class="dot">
+</span> Your personal AI workspace</span>
+<h1>Think clearly.<br>
+<span class="accent">Build anything.</span>
+</h1><p class="lead">Meet py — an AI assistant designed to help you code, create, automate and explore. Choose cloud AI providers or use a local model on your own machine.</p>
+<div class="actions" id="download">
+<a class="btn primary" href="https://drive.google.com/file/d/1qiwtm4H7xJMCXT8jpVAgnzGRVj_xruoS/view?usp=drive_link" download="py.zip" id="downloadBtn">Download py ZIP <span>↓</span></a><a class="btn secondary" href="#features">Explore py <span>→</span></a></div><p class="fine">Project files in a ZIP · Read SETUP.txt after extracting · Configure your own API keys</p><div class="preview"><div class="windowbar"><i></i><i></i><i></i></div><div class="mock"><div class="mocklabel">py / workspace</div><h3>What would you like to make?</h3><p>Your ideas, your tools, your workflow — all in one focused space.</p><div class="prompt"><span>Ask py to help you build something…</span><b>↑</b></div></div></div></section><section class="section" id="features"><div class="wrap"><h2>One workspace. <span class="accent">More possibilities.</span></h2><p class="sub">A focused home for the tools and workflows you use to get things done.</p><div class="grid"><article class="card"><div class="icon">⌘</div><h3>Code with purpose</h3><p>Explore ideas, draft scripts, understand errors and work through programming tasks.</p></article><article class="card"><div class="icon">◈</div><h3>Your choice of AI</h3><p>Configure supported cloud providers, or set up local AI for supported offline workflows.</p></article><article class="card"><div class="icon">⌁</div><h3>Automate carefully</h3><p>Use py's tools and permission controls to help manage everyday workflows.</p></article></div><div class="bottom" id="privacy"><div><h2>Made to fit your workflow.</h2><p>Keep your project files separate and review setup and credential guidance before first launch.</p></div><a class="btn primary" href="https://drive.google.com/file/d/1qiwtm4H7xJMCXT8jpVAgnzGRVj_xruoS/view?usp=drive_link" download="py.zip" id="bottomDownload">Get the py ZIP ↓</a></div></div></section>
+<section class="section" id="steps"><h2 class="center">Get started with py</h2><p class="sub">Follow the setup guide included with your downloaded files for the full instructions.</p><div class="steps"><article class="step"><span class="num">1</span><div><h3>Find the ZIP</h3><p>Open your browser's Downloads folder and locate <strong>py.zip</strong>.</p></div></article><article class="step"><span class="num">2</span><div><h3>Extract the files</h3><p>Extract the ZIP to a folder you can easily find. Keep <strong>py oraganised</strong> and <strong>Py organised Web</strong> as separate projects.</p></div></article><article class="step"><span class="num">3</span><div><h3>Refer to SETUP.txt</h3><p>Open <strong>SETUP.txt</strong> at the top level of the extracted folder. It contains the setup guidance, prerequisites and first-run notes.</p></div></article><article class="step"><span class="num">4</span><div><h3>Configure your own credentials</h3><p>Do not expect personal API keys, old account databases or private chat history to be included. Configure your own provider keys and initialize accounts safely.</p></div></article></div><div class="notice"><strong>Important:</strong> Browser downloads can take a moment. If you do not see <strong>py.zip</strong> in Downloads, use the Download again button above. The page cannot verify that your browser finished saving the file.</div><div class="center setup-download"><a class="btn primary" href="https://drive.google.com/file/d/1qiwtm4H7xJMCXT8jpVAgnzGRVj_xruoS/view?usp=drive_link" download="py.zip">Download py ZIP ↓</a></div></section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <h2>Frequently asked <span class="accent">questions.</span></h2>
+    <p class="sub">Quick answers to common questions about downloading, setting up and using py.</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is py?</summary>
+        <p>py is a personal AI workspace designed to help with coding, creating, automation and exploring ideas. Depending on your setup, it can use supported cloud AI providers or a supported local model.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I download py?</summary>
+        <p>Use any “Download py ZIP” button on this page. The file is hosted on Google Drive, so your browser may open a Drive page before the download starts.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What should I do after downloading?</summary>
+        <p>Find <strong>py.zip</strong> in your browser’s Downloads folder, extract it, then open the included <strong>SETUP.txt</strong> and follow its instructions.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need my own API key?</summary>
+        <p>If you use a cloud AI provider, you may need to configure your own provider API key. Follow the setup instructions for the provider you choose, and never share your key publicly or commit it to a public repository.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I use py with a local AI model?</summary>
+        <p>py’s project documentation describes support for local AI workflows. Availability depends on the model and dependencies you install; consult SETUP.txt before configuring a local model.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does local AI mean every feature works offline?</summary>
+        <p>Not necessarily. A local model can handle supported model tasks on your machine, but cloud providers, downloads, or other integrations may still require an internet connection.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Are my API keys and account data included in the ZIP?</summary>
+        <p>The setup page says not to expect personal API keys, old account databases or private chat history to be included. Configure credentials and initialize accounts safely on your own machine.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Why can’t I see the ZIP in Downloads?</summary>
+        <p>Wait a moment and check your browser’s download list. If it has not appeared, click a download button again. This website cannot verify whether your browser completed the download.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where do I find installation instructions?</summary>
+        <p>Extract the ZIP and open <strong>SETUP.txt</strong> in the top-level project folder. It contains the project’s setup guidance, prerequisites and first-run notes.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I keep the desktop and web projects separate?</summary>
+        <p>Yes. The included setup guidance specifically says to keep <strong>py oraganised</strong> and <strong>Py organised Web</strong> as separate projects.</p>
+      </details>
+    </div>
+    <p class="faq-contact">Still stuck? Recheck <strong>SETUP.txt</strong> first; it is the source of truth for your downloaded project version.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- Added a wrapper style to perfectly center the content on the screen -->
+<main id="thankyou-content" class="thankyou-screen" aria-live="polite" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; text-align: center;"> 
+    <section class="panel" aria-labelledby="thankyou-title" style="display: flex; flex-direction: column; align-items: center;"> 
+        
+        <div class="check" aria-hidden="true">✓</div> 
+        <span class="pill">Download link opened</span> 
+        
+        <h1 id="thankyou-title">Thank you for<br><span class="accent">downloading py.</span></h1> 
+        <p class="lead">Your download should be available through Google Drive or your browser’s download list. Here’s what to do next to get started.</p> 
+        
+        <div class="actions"> 
+            <a class="btn primary" href="https://drive.google.com/file/d/1qiwtm4H7xJMCXT8jpVAgnzGRVj_xruoS/view?usp=drive_link">Download py again ↓</a> 
+            <a class="btn secondary" href="#top">Back to homepage</a> 
+        </div> 
+        
+        <div class="steps" style="display: flex; justify-content: center; gap: 20px; text-align: left;"> 
+            <article class="step"><div class="num">1</div><h2>Check Downloads</h2><p>Look for <strong>py.zip</strong> in your browser’s download list or Downloads folder.</p></article> 
+            <article class="step"><div class="num">2</div><h2>Extract the ZIP</h2><p>Extract the archive into a folder you can easily find.</p></article> 
+            <article class="step"><div class="num">3</div><h2>Read SETUP.txt</h2><p>Follow the included setup instructions before launching py.</p></article> 
+        </div> 
+        
+        <p class="note">This page cannot confirm that your browser finished downloading the file. If it is missing, use “Download py again”.</p> 
+    </section>
+</main> 
+
+<footer style="text-align: center; margin-top: 20px;">
+    <div class="wrap footrow">
+        <span>© py · Personal AI workspace</span>
+        <span><a href="#steps">Setup</a> · <a href="#faq">FAQ</a> · Black + teal</span>
+    </div>
+</footer>
+
+<script>
+(() => {
+  const downloadUrl = 'https://drive.google.com/file/d/1qiwtm4H7xJMCXT8jpVAgnzGRVj_xruoS/view?usp=drive_link';
+  const home = document.getElementById('homepage-content');
+  const thankyou = document.getElementById('thankyou-content');
+  const header = document.querySelector('body > header');
+  const footer = document.querySelector('body > footer');
+
+  function showThankYou() {
+    if (home) home.style.display = 'none';
+    if (thankyou) thankyou.classList.add('is-visible');
+    if (header) header.style.display = 'none';
+    if (footer) footer.style.display = 'none';
+    document.title = 'Thank you for downloading — py';
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    history.pushState({page: 'thankyou'}, '', '#thank-you');
+  }
+
+  function showHome() {
+    if (home) home.style.display = '';
+    if (thankyou) thankyou.classList.remove('is-visible');
+    if (header) header.style.display = '';
+    if (footer) footer.style.display = '';
+    document.title = 'py — Your AI, your workspace';
+  }
+
+  document.querySelectorAll('a[href="' + downloadUrl + '"]').forEach(link => {
+    link.removeAttribute('download');
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      window.open(downloadUrl, '_blank', 'noopener,noreferrer');
+      showThankYou();
+    });
+  });
+
+  document.querySelectorAll('#thankyou-content a[href="index.html"]').forEach(link => {
+    link.setAttribute('href', '#top');
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      showHome();
+      history.pushState({}, '', location.pathname);
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  });
+
+  window.addEventListener('popstate', event => {
+    if (event.state && event.state.page === 'thankyou') showThankYou();
+    else showHome();
+  });
+
+  if (location.hash === '#thank-you') showThankYou();
+})();
+</script>
+
+</body>
+</html>
